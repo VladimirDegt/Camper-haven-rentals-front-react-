@@ -24,10 +24,10 @@ export const App = () => {
         <div id="app" className={classNames("app_redesigned", {}, [theme])}>
             <Suspense fallback="">
                 <MainLayout
-                    header={<Navbar/>}
+                    // header={<Navbar/>}
                     content={<AppRouter/>}
                     sidebar={<Sidebar/>}
-                    toolbar={<Toolbar />}
+                    // toolbar={<Toolbar />}
                 />
             </Suspense>
         </div>

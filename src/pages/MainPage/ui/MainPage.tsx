@@ -1,7 +1,7 @@
 const MainPage = () => {
   return (
       <main>
-          <h2>main page</h2>
+          <h2>Головна</h2>
       </main>
   );
 };

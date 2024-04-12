@@ -84,26 +84,8 @@ npm run start або npm run star:webpack - запуск frontend проєкту
 
 ----
 
-## Сутності (entities)
+## Документація бекенда
 
-- [Country](/src/entities/Country)
-- [Currency](/src/entities/Currency)
-- [Profile](/src/entities/Profile)
-- [User](/src/entities/User)
-
-## Фічи (features)
-
-- [AuthByUsername](/src/features/AuthByUsername)
-- [DragAndDrop](/src/features/DragAndDrop)
-- [EditableProfileCard](/src/features/EditableProfileCard)
-- [TextEditor](/src/features/TextEditor)
-
-----
-
-### Оптимізація
-
-Для прикладу виконане леніве завантаження модалки
-
-Використано леніве завантаження бібліотеки, наприкладі 'react-toastify'
+[Swagger](https://camper-haven-rentals-back.onrender.com/api)
 
 ----

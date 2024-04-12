@@ -3,7 +3,6 @@ import
 import ContentEmail from '@/shared/assets/icons/redactor.svg';
 import UploadFile from '@/shared/assets/icons/drag-drop.svg';
 import MainIcon from '@/shared/assets/icons/home.svg';
-import ProfileIcon from '@/shared/assets/icons/avatar.svg';
 import { RoutePath } from "@/shared/config/routeConfig/routeConfig";
 
 export interface SidebarItemType {
@@ -18,19 +17,16 @@ export const SidebarItemsList: SidebarItemType[] = [
         Icon: MainIcon,
         text: 'Головна'
     },
+
     {
-        path: RoutePath.about,
+        path: RoutePath.catalog,
         Icon: UploadFile,
-        text: 'Файл'
+        text: 'Каталог'
     },
     {
-        path: RoutePath.text,
+        path: RoutePath.favorites,
         Icon: ContentEmail,
-        text: 'Контекст'
+        text: 'Обране'
     },
-    {
-        path: RoutePath.profile,
-        Icon: ProfileIcon,
-        text: 'Профіль'
-    },
+
 ]

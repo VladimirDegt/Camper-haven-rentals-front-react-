@@ -4,20 +4,20 @@ import { NotFoundPage } from "@/pages/NotFoundPage";
 import { ProfilePage } from "@/pages/ProfilePage";
 import { TextPage } from "@/pages/TextPage";
 import { RouteProps } from "react-router-dom";
+import {CatalogPage} from "@/pages/CatalogPage";
+import {FavoritePage} from "@/pages/FavoritePage";
 
 export enum AppRouters{
     MAIN = 'main',
-    ABOUT = 'about',
-    TEXT = 'text',
-    PROFILE = 'profile',
+    CATALOG = 'catalog',
+    FAVORITES = 'favorites',
     NOT_FOUND = 'not_found'
 };
 
 export const RoutePath: Record<AppRouters, string> = {
     [AppRouters.MAIN]: '/',
-    [AppRouters.ABOUT]: '/about',
-    [AppRouters.TEXT]: '/text',
-    [AppRouters.PROFILE]: '/profile',
+    [AppRouters.CATALOG]: '/catalog',
+    [AppRouters.FAVORITES]: '/favorites',
     [AppRouters.NOT_FOUND]: '*',
 };
 
@@ -26,20 +26,16 @@ export const routeConfig: Record<AppRouters, RouteProps> = {
         path: RoutePath.main,
         element: <MainPage/>
     },
-    [AppRouters.ABOUT]: {
-        path: RoutePath.about,
-        element: <AboutPage/>
+    [AppRouters.CATALOG]: {
+        path: RoutePath.catalog,
+        element: <CatalogPage/>
     },
-    [AppRouters.TEXT]: {
-        path: RoutePath.text,
-        element: <TextPage/>
+    [AppRouters.FAVORITES]: {
+        path: RoutePath.favorites,
+        element: <FavoritePage/>
     },
-    [AppRouters.PROFILE]: {
-        path: RoutePath.profile,
-        element: <ProfilePage/>
-    },
-        [AppRouters.NOT_FOUND]: {
-        path: RoutePath.not_found,
-        element: <NotFoundPage/>
+    [AppRouters.NOT_FOUND]: {
+    path: RoutePath.not_found,
+    element: <NotFoundPage/>
     },
 }

@@ -4,7 +4,7 @@ import cls from "./MainLayout.module.scss"
 
 interface MainLayoutProps {
     className?: string;
-    header: ReactElement;
+    header?: ReactElement;
     content: ReactElement;
     sidebar: ReactElement;
     toolbar?: ReactElement;
