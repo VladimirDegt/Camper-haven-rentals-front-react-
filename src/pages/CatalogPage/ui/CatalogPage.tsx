@@ -1,9 +1,10 @@
+import {CardList} from "@/shared/ui/CardList/CardList";
 
 const CatalogPage = () => {
 
     return (
         <main>
-            <h2 >Каталог</h2>
+            <CardList/>
         </main>
     )
 };

@@ -1,0 +1,61 @@
+.container {
+    width: 888px;
+    display: flex;
+    gap: 24px;
+    padding: 24px;
+    background: #FFFFFF;
+    border-radius: 20px;
+    border: 1px solid #101828;
+
+    &_img {
+         width:290px;
+         height:310px;
+        border-radius: 8px;
+         overflow: hidden;
+    }
+
+    &_item_img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &_content {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        &_title {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        &_description {
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            color: #475467;
+        }
+    }
+}
+.price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.location {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 16px;
+}
+
+.description {
+    max-width: 500px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

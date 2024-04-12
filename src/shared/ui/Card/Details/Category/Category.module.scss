@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 100px;
+    background-color:  #F2F4F7;
+    padding: 12px 18px 12px 18px;
+    max-width: 230px;
+
+    &_icon {
+        width: 20px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &_text {
+        text-align: center;
+        font-family: 'Inter', sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        color: #101828;
+    }
+
+}

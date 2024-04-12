@@ -1,0 +1,46 @@
+.container {
+    width: 888px;
+    display: flex;
+    gap: 24px;
+    padding: 24px;
+    background: #FFFFFF;
+    border-radius: 20px;
+    border: 1px solid #101828;
+
+    &_img {
+
+        overflow: hidden;
+    }
+
+    &_content {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        &_title {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        &_description {
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            color: #475467;
+        }
+    }
+}
+.price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.location {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 16px;
+}
