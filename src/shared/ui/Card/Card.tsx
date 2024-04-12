@@ -1,6 +1,9 @@
 import cls from "./Card.module.scss";
-import CarI from '../../assets/image/car.png';
-import {Details} from "@/shared/ui/Card/Details/Details";
+import { Details } from "@/shared/ui/Card/Details/Details";
+import { Icon } from '@/shared/ui/Icon/Icon';
+import IconHeart from "@/shared/assets/icons/other/heart.svg"
+import { Button, ButtonTheme } from '@/shared/ui/Button/Button';
+
 export const Card = (
     {
         name,
@@ -28,9 +31,21 @@ export const Card = (
             </div>
             <div className={cls.container_content}>
                 <div className={cls.container_content_title}>
-                    <div className={cls.price}>
+                    <div className={cls.conteiner_price}>
                         <h2>{name}</h2>
-                        <h2>€{price},00</h2>
+                        <div className={cls.price}>
+                            <h2>€{price},00</h2>
+                            <Button theme={ButtonTheme.CLEAR}>
+                                <Icon
+                                    Svg={IconHeart}
+                                    alt={'іконка додавання до обраного'}
+                                    height={24}
+                                    width={24}
+                                />
+                                </Button>
+
+                        </div>
+
                     </div>
                     <div className={cls.location}>
                         <h2>{rating}({reviews.length} Reviews)</h2>
