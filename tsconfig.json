@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    // куди збираємо, нам не важливо бо збирає webpack
+    "noImplicitAny": true,
+    // підсвітлює код де не має типу
+    "module": "ESNext",
+    "target": "es5",
+    // в яку версію компілюємо
+    "jsx": "react-jsx",
+    "allowJs": true,
+    "strict": true,
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    // для абсолютного імпорту
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    },
+    // дозволяє працювати з лібами, що не працюють з default імпортами
+    "allowSyntheticDefaultImports": true,
+    // дозволяє працювати з пакета, що використовують common.js через import
+    "esModuleInterop": true,
+    // дозволяє ітерацію об'єктів типу FileList
+    "downlevelIteration": true,
+    // ізоляція при імпорті інтерфейсів, які перекидуємо у типи
+    "isolatedModules": true
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  }
+}

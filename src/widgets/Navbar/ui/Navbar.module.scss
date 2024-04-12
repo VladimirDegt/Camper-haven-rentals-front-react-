@@ -1,0 +1,24 @@
+.NavbarRedesigned {
+    position: relative;
+    padding: 16px;
+    z-index: 1;
+}
+
+.links,
+.dropdown {
+    margin-left: auto;
+}
+
+.mainLink {
+    margin-right: 15px;
+}
+
+.btn {
+    color: var(--text-redesigned);
+    font-size: 24px;
+    transition: color 0.3s;
+
+    &:hover {
+        color: var(--accent-redesigned);
+    }
+}

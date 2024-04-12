@@ -1,0 +1,69 @@
+.app {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 4px 4px 30px rgb(0 0 0 / 20%);
+    padding: 10px;
+    gap: 5px;
+    background-color: rgb(0 110 255 / 4.1%);
+    color: var(--primary-color);
+}
+
+.container-label {
+    width: 100%;
+    height: 100%;
+}
+
+.drop-area {
+    width: 100%;
+    height: var(--drag-and-drop-height);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    border-radius: 10px;
+    border: 2px dashed var(--primary-color);
+    font-size: 20px;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.drop-area:hover {
+    border-color: var(--accent-redesigned);
+}
+
+.fileInput {
+    display: none;
+}
+
+.containerBtn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btnSend {
+    min-width: 200px;
+    border-radius: 10px;
+    border-color: var(--inverted-primary-color);
+    transition: var(--transition);
+    box-shadow: 2px 2px 5px #18181869;
+}
+
+.btnSend:hover {
+    background-color: var(--inverted-primary-color);
+}
+
+.containerLoader {
+    width: 100%;
+    height: var(--drag-and-drop-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
