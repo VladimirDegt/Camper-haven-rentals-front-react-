@@ -6,14 +6,6 @@ import Svg from "@/shared/assets/icons/other/location.svg"
 import {useSelector} from "react-redux";
 import {selectCampers} from "@/features/CardList/model/selectors/getAllCampers";
 
-const people = [
-    {id: 1, name: 'Durward Reynolds'},
-    {id: 2, name: 'Kenton Towne'},
-    {id: 3, name: 'Therese Wunsch'},
-    {id: 4, name: 'Benedict Kessler'},
-    {id: 5, name: 'Katelyn Rohan'},
-]
-
 export const Select = () => {
     const [selectedPerson, setSelectedPerson] = useState({id: 0, name: 'вибери локацію'})
     const [options, setOptions] = useState([])

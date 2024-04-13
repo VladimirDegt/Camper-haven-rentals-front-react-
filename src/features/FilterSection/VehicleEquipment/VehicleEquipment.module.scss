@@ -1,0 +1,31 @@
+.container {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+}
+
+.text_filters {
+  font-weight: 500;
+  font-size: 16px;
+  color: #475467
+}
+
+.text_title {
+  margin-top: 14px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 120%;
+  color: var(--main);
+}
+
+.line {
+  margin-top: 24px;
+  border-bottom: 1px solid rgba(16, 24, 40, 0.1);
+}
+
+.list {
+  margin-top: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}

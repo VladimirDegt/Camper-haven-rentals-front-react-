@@ -5,6 +5,7 @@
 .label {
   margin-bottom: 8px;
   font: var(--font-m);
+  color: #475467;
 }
 
 .button {
@@ -28,6 +29,8 @@
 }
 
 .options {
+  position: absolute;
+  width: 360px;
   margin-top: 4px;
   padding: 8px;
   background-color: #F7F7F7;
