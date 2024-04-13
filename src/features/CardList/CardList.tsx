@@ -6,7 +6,8 @@ import {Loader} from "@/shared/ui/Loader/ui/Loader";
 import {Button, ButtonTheme} from "@/shared/ui/Button/Button";
 import {useDispatch, useSelector} from "react-redux";
 import {campersActions} from "@/features/CardList/model/slice/camperSlice";
-import {selectCampers} from "@/features/CardList/model/selectors/getAllCampers";
+import {selectCampers, selectFilter} from "@/features/CardList/model/selectors/getAllCampers";
+import {filterCampers} from "@/shared/lib/filterCampers/filterCampers";
 
 export const CardList = () => {
     const [camper, setCamper] = useState([]);
@@ -14,6 +15,11 @@ export const CardList = () => {
     const [visibleCamperCount, setVisibleCamperCount] = useState(4);
     const dispatch = useDispatch();
     const campers = useSelector(selectCampers);
+    const filtered = useSelector(selectFilter);
+
+    useEffect(() => {
+        if(filtered) setCamper(filterCampers(campers, filtered));
+    }, [filtered]);
 
     useEffect(() => {
         setIsLoadingServer(true);
@@ -22,20 +28,19 @@ export const CardList = () => {
                 setCamper(response.data);
                 dispatch(campersActions.addCamper(response.data))
             })
-            .catch(error => {
-                console.log('error', error);
-            })
+            .catch(error => console.log('error', error))
             .finally(() => setIsLoadingServer(false));
     }, []);
 
     useEffect(() => {
-        if(campers.length > 0) {
-            setCamper(campers);
-        }
+        if(campers.length > 0) setCamper(campers);
     }, []);
 
-    const loadMore = () => {
-        setVisibleCamperCount(prevCount => prevCount + 4);
+    const loadMore = () => setVisibleCamperCount(prevCount => prevCount + 4);
+
+    const handleReset = () => {
+        dispatch(campersActions.clearFilter());
+        setCamper(campers);
     };
 
     return (
@@ -48,17 +53,24 @@ export const CardList = () => {
             ) : (
                 <section className={cls.container_list}>
                     <ul className={cls.list}>
-                        {camper.length > 0 && camper.slice(0, visibleCamperCount).map((item: any, index: number) => (
+                        {camper.length > 0
+                            ? camper.slice(0, visibleCamperCount).map((item: any, index: number) => (
                             <li key={`${item.name} + ${index}`}>
                                 <Card {...item} />
                             </li>
-                        ))}
+                        ))
+                            : <li className={cls.not_found}>
+                                <h3>Нажаль, нічого не знайдено</h3>
+                                <Button theme={ButtonTheme.SEARCH} onClick={handleReset}>Reset</Button>
+                            </li>
+                        }
                     </ul>
                     {camper.length > visibleCamperCount && (
                         <Button theme={ButtonTheme.LOAD_MORE} onClick={loadMore}>
                             Load more
                         </Button>
                     )}
+
                 </section>
             )}
         </>

@@ -17,7 +17,7 @@ export const Select = ({getLocation} : SelectProps) => {
 
     useEffect(() => {
         if (campers.length > 0) {
-            const uniqueLocations = [...new Set(campers[0].map((item: any) => item.location))];
+            const uniqueLocations = [...new Set(campers.map((item: any) => item.location))];
             // @ts-ignore
             setOptions(uniqueLocations.map((location: string, index: number) => ({ id: index + 1, name: location })));
         }

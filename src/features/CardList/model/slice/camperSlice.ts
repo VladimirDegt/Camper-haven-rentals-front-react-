@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
     campers: [],
-    filter: {}
+    filter: null
 }
 
 export const camperSlice = createSlice({
@@ -10,10 +10,14 @@ export const camperSlice = createSlice({
     initialState,
     reducers: {
         addCamper: (state, action) => {
-            state.campers.push(action.payload)
+            state.campers = action.payload
         },
         addFilter: (state, action) => {
             state.filter = action.payload
+        },
+
+        clearFilter: (state) => {
+            state.filter = null
         }
     },
 });
