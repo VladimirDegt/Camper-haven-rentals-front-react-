@@ -1,7 +1,7 @@
 .Button {
     cursor: pointer;
-    color: var(--primary-color);
-    padding: 6px 15px;
+    //color: var(--primary-color);
+    //padding: 6px 15px;
 }
 
 .clear,
@@ -77,4 +77,38 @@
 
 .disabled {
     opacity: 0.5;
+}
+
+.show {
+    max-width: 173px;
+    background-color: #E44848;
+    border-radius: 200px;
+    padding: 16px 40px;
+    font: var(--font-m);
+    font-weight: 500;
+    color: #fff;
+    transition: var(--transition);
+    border: none;
+
+    &:hover,
+    &:focus {
+        background-color: #D84343;
+    }
+
+}
+
+.load_more {
+    border: 1px solid rgba(71, 84, 103, 0.2);
+    border-radius: 200px;
+    padding: 16px 32px;
+    width: 150px;
+    font: var(--font-m);
+    color: var(--font-family-text-redesigned);
+    background-color: #FFFFFF;
+    transition: border 0.3s ease-in-out;
+
+    &:hover,
+    &:focus {
+        border: 1px solid #E44848;
+    }
 }

@@ -9,6 +9,8 @@ export enum ButtonTheme {
     OUTLINE_RED = 'outline_red',
     BACKGROUND = 'background',
     BACKGROUND_INVERTED = 'backgroundInverted',
+    SHOW = 'show',
+    LOAD_MORE = 'load_more',
 }
 
 export enum ButtonSize {
@@ -44,7 +46,7 @@ export const Button = memo((props: ButtonProps) => {
         [cls.square]: square,
         [cls.circular]: circular,
         [cls[size]]: true,
-        [cls.disabled]: disabled
+        [cls.disabled]: disabled,
     };
 
     return (

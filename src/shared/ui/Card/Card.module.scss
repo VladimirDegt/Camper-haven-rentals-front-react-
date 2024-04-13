@@ -8,7 +8,7 @@
     border: 1px solid #101828;
 
     &_img {
-         width:290px;
+        width: 290px;
          height:310px;
         border-radius: 8px;
          overflow: hidden;
@@ -18,12 +18,14 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+        object-position: center;
     }
 
     &_content {
         display: flex;
         flex-direction: column;
         gap: 24px;
+        width: 526px;
 
         &_title {
             display: flex;
@@ -40,7 +42,7 @@
         }
     }
 }
-.price {
+.container_price {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -59,3 +61,10 @@
     white-space: nowrap;
     text-overflow: ellipsis;
 }
+
+.price {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
