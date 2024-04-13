@@ -5,6 +5,8 @@ import IconHeartDefault from "@/shared/assets/icons/other/heart_default.svg";
 import IconHeartActive from "@/shared/assets/icons/other/heart_active.svg"
 import {Button, ButtonTheme} from "@/shared/ui/Button/Button";
 import {useState} from "react";
+import {CardProps} from "@/shared/types/card";
+
 
 export const Card = (
     {
@@ -19,7 +21,7 @@ export const Card = (
         adults,
         transmission,
         engine
-    }) => {
+    }: CardProps) => {
 const [isClickHeart, setIsClickHeart] = useState(false)
     const handleClickHeart = () => {
         setIsClickHeart(!isClickHeart)

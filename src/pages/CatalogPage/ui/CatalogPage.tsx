@@ -1,9 +1,12 @@
-import {CardList} from "@/shared/ui/CardList/CardList";
+import {CardList} from "@/features/CardList/CardList";
+import {FilterSection} from "@/features/FilterSection/FilterSection";
+import cls from "./CatalogPage.module.scss";
 
 const CatalogPage = () => {
 
     return (
-        <main>
+        <main className={cls.container}>
+            <FilterSection/>
             <CardList/>
         </main>
     )

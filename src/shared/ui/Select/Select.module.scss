@@ -1,0 +1,45 @@
+.container_btn {
+  position: relative;
+}
+
+.label {
+  margin-bottom: 8px;
+  font: var(--font-m);
+}
+
+.button {
+  width: 100%;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  padding-left: 42px;
+  border-radius: 10px;
+  border: none;
+  width: 360px;
+  height: 56px;
+  background-color: #F7F7F7;
+  text-align: left;
+  cursor: pointer;
+}
+
+.svg {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+}
+
+.options {
+  margin-top: 4px;
+  padding: 8px;
+  background-color: #F7F7F7;
+  text-align: left;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.option {
+  &:hover,
+  &:focus {
+    background-color: #FFC531;
+    border-radius: 4px;
+  }
+}

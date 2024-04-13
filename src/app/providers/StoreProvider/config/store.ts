@@ -3,6 +3,7 @@ import { StateSchema } from "./StateScheme";
 import { userReducer } from '@/entities/User';
 import { loginReducer, registerReducer } from "@/features/AuthByUserEmail";
 import { profileReducer } from '@/entities/Profile';
+import { camperSlice } from '@/features/CardList/model/slice/camperSlice';
 import { $api } from '@/shared/api/api';
 import type { To } from '@remix-run/router';
 import type { NavigateOptions } from 'react-router/dist/lib/context';
@@ -19,6 +20,8 @@ export function createReduxStore(
         loginForm: loginReducer,
         //@ts-ignore
         profile: profileReducer,
+
+        campers: camperSlice.reducer,
     }
 
     return (configureStore({
@@ -33,7 +36,6 @@ export function createReduxStore(
                 }
             }
         })
-        // preloaderState: initialState
         })
     )
 }
