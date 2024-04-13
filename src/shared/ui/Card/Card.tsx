@@ -46,7 +46,6 @@ const [isClickHeart, setIsClickHeart] = useState(false)
                                     ? <Icon Svg={IconHeartActive} width={24} height={24}/>
                                     : <Icon Svg={IconHeartDefault} width={24} height={24}/>}
                             </Button>
-
                         </div>
 
                     </div>

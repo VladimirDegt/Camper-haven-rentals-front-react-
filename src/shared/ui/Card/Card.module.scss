@@ -9,9 +9,9 @@
 
     &_img {
         width: 290px;
-         height:310px;
+        height:310px;
         border-radius: 8px;
-         overflow: hidden;
+        overflow: hidden;
     }
 
     &_item_img {
@@ -42,10 +42,16 @@
         }
     }
 }
-.container_price {
+
+.conteiner_price {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.price {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .location {
