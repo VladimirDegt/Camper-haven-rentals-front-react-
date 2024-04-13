@@ -1,7 +1,7 @@
 import cls from "./Category.module.scss";
 import {Icon} from "@/shared/ui/Icon/Icon";
 import IconAC from "@/shared/assets/icons/categories/ac.svg"
-export const AC = () => {
+export const  AC = () => {
 
     return (
         <div className={cls.container}>

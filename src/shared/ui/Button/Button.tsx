@@ -11,6 +11,7 @@ export enum ButtonTheme {
     BACKGROUND_INVERTED = 'backgroundInverted',
     SHOW = 'show',
     LOAD_MORE = 'load_more',
+    SEARCH = 'search',
 }
 
 export enum ButtonSize {

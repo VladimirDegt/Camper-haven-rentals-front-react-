@@ -15,20 +15,25 @@ import {Freezer} from "@/shared/ui/Card/Details/Category/Freezer";
 import {Gaz} from "@/shared/ui/Card/Details/Category/Gaz";
 import {Water} from "@/shared/ui/Card/Details/Category/Water";
 import {Microwave} from "@/shared/ui/Card/Details/Category/Microwave";
+import {DetailsItem} from "@/shared/types/card";
 
-export const Details = ({categories, adults, transmission, engine}) => {
+interface DetailsProps {
+    categories: DetailsItem;
+    adults: number;
+    transmission: string;
+    engine: string;
+}
+
+export const Details = ({categories, adults, transmission, engine} : DetailsProps) => {
 
     return (
         <ul className={cls.container}>
             {adults && <li><Adults value={adults}/></li>}
             {transmission && <li><Automatic/></li>}
-            <li>
-                <AC/>
-            </li>
+            {categories.airConditioner !== 0 && <li> <AC/></li>}
             {engine && <li><Petrol/></li>}
             {categories.kitchen !== 0 && <li><Kitchen/></li>}
             {categories.beds !== 0 && <li><Bed value={categories.beds}/></li>}
-            {categories.airConditioner !== 0 && <li><AirConditioner value={categories.airConditioner}/></li>}
             {categories.CD !== 0 && <li><CD/></li>}
             {categories.radio !== 0 && <li><Radio/></li>}
             {categories.hob !== 0 && <li><Hob value={categories.hob}/></li>}

@@ -6,8 +6,12 @@ import Svg from "@/shared/assets/icons/other/location.svg"
 import {useSelector} from "react-redux";
 import {selectCampers} from "@/features/CardList/model/selectors/getAllCampers";
 
-export const Select = () => {
-    const [selectedPerson, setSelectedPerson] = useState({id: 0, name: 'вибери локацію'})
+interface SelectProps {
+    getLocation: (value: string) => void
+}
+
+export const Select = ({getLocation} : SelectProps) => {
+    const [selectedLocation, setSelectedLocation] = useState({id: 0, name: 'вибери локацію'})
     const [options, setOptions] = useState([])
     const campers = useSelector(selectCampers);
 
@@ -19,11 +23,19 @@ export const Select = () => {
         }
     }, [campers.length]);
 
+    useEffect(() => {
+        getLocation(selectedLocation.name);
+    }, [selectedLocation]);
+
     return (
-        <Listbox value={selectedPerson} onChange={setSelectedPerson}>
+        <Listbox value={selectedLocation} onChange={setSelectedLocation}>
             <Listbox.Label className={cls.label}>Location</Listbox.Label>
             <div className={cls.container_btn}>
-                <Listbox.Button className={cls.button}>{selectedPerson.name}</Listbox.Button>
+                <Listbox.Button
+                    className={cls.button}
+                >
+                    {selectedLocation.name}
+                </Listbox.Button>
                 <Icon Svg={Svg} width={18} height={20} className={cls.svg}/>
             </div>
 

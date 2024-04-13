@@ -5,6 +5,7 @@ import { App } from "./app/App";
 import { ThemeProvider } from "@/app/providers/ThemeProvider";
 import { ErrorBoundary } from "@/app/providers/ErrorBoundary";
 import { StoreProvider } from "@/app/providers/StoreProvider";
+import {ToastContainer} from "react-toastify";
 
 const container = document.getElementById("root");
 const root = createRoot(container!);
@@ -13,6 +14,7 @@ root.render(
         <StoreProvider>
             <ErrorBoundary>
                 <ThemeProvider>
+                    <ToastContainer autoClose={2000} />
                     <App/>
                 </ThemeProvider>
             </ErrorBoundary>

@@ -1,4 +1,4 @@
-interface Details {
+export interface DetailsItem {
     "airConditioner": number;
     "bathroom": number;
     "kitchen": number;
@@ -36,7 +36,7 @@ export interface CardProps {
     "tank": string;
     "consumption": string;
     "description": string;
-    "details": Details;
+    "details": DetailsItem;
     "gallery": string[];
     "reviews": Reviews[];
 }

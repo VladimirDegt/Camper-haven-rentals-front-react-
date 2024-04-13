@@ -8,6 +8,7 @@ import {LOCAL_STORAGE_THEME_KEY} from "@/app/providers/ThemeProvider/lib/ThemeCo
 import {useDispatch} from "react-redux";
 import {userActions} from "@/entities/User";
 import {MainLayout} from "@/shared/layouts/MainLayout";
+import 'react-toastify/dist/ReactToastify.min.css';
 import {Toolbar} from "@/widgets/Toolbar";
 
 document.body.className = localStorage.getItem(LOCAL_STORAGE_THEME_KEY) || 'app_light_theme';
