@@ -29,10 +29,10 @@ export const FilterSection = () => {
     }
 
     const handleClick = () => {
-        if(location === 'вибери локацію') {
-            toast.error('Виберіть локацію', {toastId: customId})
-            return
-        }
+        if(location === 'choose a location') return toast.error('Choose a location', {toastId: customId});
+        if(equipment.length === 0) return toast.error('Choose a vehicle equipment', {toastId: customId});
+        if(type.length === 0) return toast.error('Choose a vehicle type', {toastId: customId});
+
         dispatch(campersActions.addFilter({location, equipment, type}))
     }
 

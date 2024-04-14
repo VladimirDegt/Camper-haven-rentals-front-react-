@@ -11,7 +11,7 @@ interface SelectProps {
 }
 
 export const Select = ({getLocation} : SelectProps) => {
-    const [selectedLocation, setSelectedLocation] = useState({id: 0, name: 'вибери локацію'})
+    const [selectedLocation, setSelectedLocation] = useState({id: 0, name: 'choose a location'})
     const [options, setOptions] = useState([])
     const campers = useSelector(selectCampers);
 
