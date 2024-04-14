@@ -37,7 +37,6 @@ export const Modal_new = ({isOpenModal, handleCloseModal, item}: Modal_newProps)
         handleCloseModal()
     }
 
-
     return (
         <Dialog
             open={isOpen}
@@ -86,7 +85,6 @@ export const Modal_new = ({isOpenModal, handleCloseModal, item}: Modal_newProps)
                     </div>
                     <PhotoList arr={gallery}/>
                     <p className={cls.description}>{description}</p>
-                    // @ts-ignore
                     <BlockCharacteristics item={item}/>
                 </div>
             </Dialog.Panel>

@@ -4,7 +4,11 @@ import { useState } from 'react';
 import { Characteristics } from '@/features/BlockCharacteristics/Characteristics/Characteristics';
 import { CardProps } from '@/shared/types/card';
 
-export const BlockCharacteristics = ({item} : CardProps) => {
+interface BlockCharacteristicsProps {
+    item: CardProps
+}
+
+export const BlockCharacteristics = ({item} : BlockCharacteristicsProps) => {
     const [isClickFeatures, setIsClickFeatures] = useState(false);
     const [isClickReviews, setIsClickReviews] = useState(false);
 

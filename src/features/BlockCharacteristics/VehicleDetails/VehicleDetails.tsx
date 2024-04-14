@@ -1,6 +1,9 @@
 import cls from './VehicleDetails.module.scss'
 import { CardProps } from '@/shared/types/card';
-export const VehicleDetails = ({item} :any) => {
+interface VehicleDetailsProps {
+    item: CardProps
+}
+export const VehicleDetails = ({item}: VehicleDetailsProps) => {
 const {
     form,
     length,
