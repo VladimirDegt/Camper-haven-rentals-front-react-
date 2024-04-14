@@ -21,11 +21,11 @@ export const Select = ({getLocation} : SelectProps) => {
             // @ts-ignore
             setOptions(uniqueLocations.map((location: string, index: number) => ({ id: index + 1, name: location })));
         }
-    }, [campers.length]);
+    }, [campers, campers.length]);
 
     useEffect(() => {
         getLocation(selectedLocation.name);
-    }, [selectedLocation]);
+    }, [getLocation, selectedLocation]);
 
     return (
         <Listbox value={selectedLocation} onChange={setSelectedLocation}>
@@ -36,13 +36,15 @@ export const Select = ({getLocation} : SelectProps) => {
                 >
                     {selectedLocation.name}
                 </Listbox.Button>
-                <Icon Svg={Svg} width={18} height={20} className={cls.svg}/>
+                <Icon Svg={Svg} width={18}
+                    height={20} className={cls.svg}/>
             </div>
 
             <Listbox.Options className={cls.options}>
                 {options.map((option) => (
                     // @ts-ignore
-                    <Listbox.Option key={option.id} value={option} className={cls.option}>
+                    <Listbox.Option key={option.id} value={option}
+                        className={cls.option}>
                         {/*@ts-ignore*/}
                         {option.name}
                     </Listbox.Option>

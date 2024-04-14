@@ -24,7 +24,7 @@ export const VehicleTypeList = ({getType}: VehicleTypeListProps) => {
         } else {
             getType([]);
         }
-    }, [filterTypes.length]);
+    }, [filterTypes, filterTypes.length, getType]);
 
     const handleClick = ({value, status}: {
         status: string;

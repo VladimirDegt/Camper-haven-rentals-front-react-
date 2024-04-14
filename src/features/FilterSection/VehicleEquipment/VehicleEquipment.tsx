@@ -27,7 +27,7 @@ export const VehicleEquipment = ({getEquipment}: EquipmentProps) => {
         } else {
             getEquipment([]);
         }
-    }, [filterEquipments.length]);
+    }, [filterEquipments, filterEquipments.length, getEquipment]);
     const handleClick = ({status, value}: {
         status: string;
         value: string;

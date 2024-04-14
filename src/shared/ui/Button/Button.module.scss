@@ -1,7 +1,5 @@
 .Button {
     cursor: pointer;
-    //color: var(--primary-color);
-    //padding: 6px 15px;
 }
 
 .clear,
@@ -98,13 +96,13 @@
 }
 
 .load_more {
-    border: 1px solid rgba(71, 84, 103, 0.2);
+    border: 1px solid rgb(71 84 103 / 20%);
     border-radius: 200px;
     padding: 16px 32px;
     width: 150px;
     font: var(--font-m);
     color: var(--font-family-text-redesigned);
-    background-color: #FFFFFF;
+    background-color: #FFF;
     transition: border 0.3s ease-in-out;
 
     &:hover,

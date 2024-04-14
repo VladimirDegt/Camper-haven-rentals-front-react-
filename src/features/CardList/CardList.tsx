@@ -19,7 +19,7 @@ export const CardList = () => {
 
     useEffect(() => {
         if(filtered) setCamper(filterCampers(campers, filtered));
-    }, [filtered]);
+    }, [campers, filtered]);
 
     useEffect(() => {
         setIsLoadingServer(true);
@@ -30,11 +30,11 @@ export const CardList = () => {
             })
             .catch(error => console.log('error', error))
             .finally(() => setIsLoadingServer(false));
-    }, []);
+    }, [dispatch]);
 
     useEffect(() => {
         if(campers.length > 0) setCamper(campers);
-    }, []);
+    }, [campers]);
 
     const loadMore = () => setVisibleCamperCount(prevCount => prevCount + 4);
 

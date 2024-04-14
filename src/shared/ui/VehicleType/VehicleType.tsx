@@ -21,14 +21,16 @@ export const VehicleType = ({icon, text, value, onClick } : VehicleTypeProps) =>
         } else {
             onClick({status: 'active', value: value});
         }
-    }, [isClicked]);
+    }, [isClicked, onClick, value]);
     const handleClick = () => {
         setIsClicked(!isClicked);
     };
 
     return (
-        <button className={`${isClicked ? cls.active : cls.container}`} data-value={value} onClick={handleClick}>
-            <Icon Svg={icon} width={40} height={28} data-value={value}/>
+        <button className={`${isClicked ? cls.active : cls.container}`} data-value={value}
+            onClick={handleClick}>
+            <Icon Svg={icon} width={40}
+                height={28} data-value={value}/>
             <p className={cls.text}>{text}</p>
         </button>
     )

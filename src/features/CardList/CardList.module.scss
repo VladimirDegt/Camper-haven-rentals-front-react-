@@ -3,12 +3,11 @@
     display: flex;
     gap: 24px;
     padding: 24px;
-    background: #FFFFFF;
+    background: #FFF;
     border-radius: 20px;
     border: 1px solid #101828;
 
     &_img {
-
         overflow: hidden;
     }
 
@@ -24,7 +23,7 @@
         }
 
         &_description {
-            font-family: 'Inter', sans-serif;
+            font-family: Inter, sans-serif;
             font-weight: 400;
             font-size: 16px;
             line-height: 24px;
@@ -32,6 +31,7 @@
         }
     }
 }
+
 .price {
     display: flex;
     justify-content: space-between;

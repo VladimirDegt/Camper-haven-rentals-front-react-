@@ -1,7 +1,7 @@
 import cls from "./Category.module.scss";
 import {Icon} from "@/shared/ui/Icon/Icon";
 import IconAdults from "@/shared/assets/icons/categories/adults.svg"
-export const Adults = ({value}) => {
+export const Adults = ({value}: string | number) => {
 
     return (
         <div className={cls.container}>
