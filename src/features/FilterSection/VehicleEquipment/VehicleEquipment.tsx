@@ -8,7 +8,7 @@ import {Equipment} from "@/shared/ui/Equipment/Equipment";
 import {useEffect, useState} from "react";
 
 const equipments= [
-    {id: '0', value: 'ac', icon: IconAC, text: 'AC'},
+    {id: '0', value: 'airConditioner', icon: IconAC, text: 'AC'},
     {id: '1', value: 'transmission', icon: IconAutomatic, text: 'Automatic'},
     {id: '2', value: 'kitchen', icon: IconKitchen, text: 'Kitchen'},
     {id: '3', value: 'TV', icon: IconTV, text: 'TV'},

@@ -36,7 +36,6 @@ export const Modal = (props: ModalProps) => {
         }
     }, [isOpen]);
 
-    // кожна функція при ререндері це нове посилання, тому юзаємо useCallback
     const closeHandler = useCallback(() => {
         if (onClose) {
             setIsClosing(true);

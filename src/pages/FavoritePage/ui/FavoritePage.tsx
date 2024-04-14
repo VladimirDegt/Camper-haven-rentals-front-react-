@@ -1,9 +1,10 @@
+import { FavoriteList } from '@/features/FavoriteList/FavoriteList';
 
 const FavoritePage = () => {
 
     return (
         <main>
-            <h2 >Обране</h2>
+            <FavoriteList/>
         </main>
     )
 };

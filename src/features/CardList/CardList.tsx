@@ -55,9 +55,9 @@ export const CardList = () => {
                     <ul className={cls.list}>
                         {camper.length > 0
                             ? camper.slice(0, visibleCamperCount).map((item: any, index: number) => (
-                            <li key={`${item.name} + ${index}`}>
-                                <Card {...item} />
-                            </li>
+                                <li key={`${item.name} + ${index}`}>
+                                    <Card item={item} />
+                                </li>
                         ))
                             : <li className={cls.not_found}>
                                 <h3>Нажаль, нічого не знайдено</h3>

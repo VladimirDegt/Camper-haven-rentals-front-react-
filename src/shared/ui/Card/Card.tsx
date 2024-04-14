@@ -6,10 +6,14 @@ import IconHeartActive from "@/shared/assets/icons/other/heart_active.svg"
 import {Button, ButtonTheme} from "@/shared/ui/Button/Button";
 import {useState} from "react";
 import {CardProps} from "@/shared/types/card";
+import { useDispatch } from 'react-redux';
+import { campersActions } from '@/features/CardList/model/slice/camperSlice';
+import { Modal_new } from '@/shared/ui/Modal_new/Modal_new';
 
 
-export const Card = (
-    {
+
+export const Card = ({ item }: { item?: Partial<CardProps> }) => {
+    const {
         name,
         price,
         gallery,
@@ -21,11 +25,24 @@ export const Card = (
         adults,
         transmission,
         engine
-    }: CardProps) => {
-const [isClickHeart, setIsClickHeart] = useState(false)
+    } = item as CardProps;
+const [isClickHeart, setIsClickHeart] = useState(false);
+const [isOpenModal, setIsOpenModal] = useState(false);
+const dispatch = useDispatch();
     const handleClickHeart = () => {
-        setIsClickHeart(!isClickHeart)
+        setIsClickHeart(!isClickHeart);
+        if (!isClickHeart) dispatch(campersActions.addFavorite(item))
+        if (isClickHeart) dispatch(campersActions.removeFavorite(item))
+    };
+
+    const handleOpenModal=()=>{
+        setIsOpenModal(true);
     }
+
+    const handleCloseModal=()=>{
+        setIsOpenModal(false);
+    }
+
     return (
         <div className={cls.container}>
             <div className={cls.container_img}>
@@ -42,11 +59,19 @@ const [isClickHeart, setIsClickHeart] = useState(false)
                     <div className={cls.container_price}>
                         <h2>{name}</h2>
                         <div className={cls.price}>
-                            <h2>€{price},00</h2>
+                            <h2>€{price}</h2>
                             <Button theme={ButtonTheme.CLEAR} onClick={handleClickHeart}>
                                 {isClickHeart
-                                    ? <Icon Svg={IconHeartActive} width={24} height={24}/>
-                                    : <Icon Svg={IconHeartDefault} width={24} height={24}/>}
+                                    ? <Icon
+                                            Svg={IconHeartActive}
+                                            width={24}
+                                            height={24}
+                                    />
+                                    : <Icon
+                                            Svg={IconHeartDefault}
+                                            width={24}
+                                            height={24}
+                                    />}
                             </Button>
                         </div>
 
@@ -65,8 +90,13 @@ const [isClickHeart, setIsClickHeart] = useState(false)
                     transmission={transmission}
                     engine={engine}
                 />
-                <Button theme={ButtonTheme.SHOW}>Show more</Button>
+                <Button theme={ButtonTheme.SHOW} onClick={handleOpenModal}>Show more</Button>
             </div>
+            <Modal_new
+                item={item}
+                isOpenModal={isOpenModal}
+                handleCloseModal={handleCloseModal}
+            />
         </div>
     );
 }
