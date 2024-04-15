@@ -3,7 +3,7 @@ import {Select} from "@/shared/ui/Select/Select";
 import {VehicleEquipment} from "@/features/FilterSection/VehicleEquipment/VehicleEquipment";
 import {VehicleTypeList} from "@/features/FilterSection/VehicleTypeList/VehicleTypeList";
 import {Button, ButtonTheme} from "@/shared/ui/Button/Button";
-import {useState} from "react";
+import {useCallback, useState} from "react";
 import {toast} from 'react-toastify';
 import {campersActions} from "@/features/CardList/model/slice/camperSlice";
 import {useDispatch} from "react-redux";
@@ -15,18 +15,17 @@ export const FilterSection = () => {
     const [type, setType] = useState<string[]>([]);
     const dispatch = useDispatch();
 
-    const getLocation = (value: string) => {
+    const getLocation = useCallback((value: string) => {
         setLocation(value);
-    }
+    }, [setLocation]);
 
-    const getEquipment = (value: string[]) => {
+    const getEquipment = useCallback((value: string[]) => {
         setEquipment(value);
-    }
+    }, [setEquipment]);
 
-    const getType = (value: string[]) => {
-        console.log('value', value)
+    const getType = useCallback((value: string[]) => {
         setType(value);
-    }
+    }, [setType]);
 
     const handleClick = () => {
         if(location === 'choose a location') return toast.error('Choose a location', {toastId: customId});

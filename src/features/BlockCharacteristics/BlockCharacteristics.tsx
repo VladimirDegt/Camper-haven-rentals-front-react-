@@ -3,6 +3,7 @@ import { Button, ButtonTheme } from '@/shared/ui/Button/Button';
 import { useState } from 'react';
 import { Characteristics } from '@/features/BlockCharacteristics/Characteristics/Characteristics';
 import { CardProps } from '@/shared/types/card';
+import {FormConnected} from "@/shared/ui/FormConnected/FormConnected";
 
 interface BlockCharacteristicsProps {
     item: CardProps
@@ -36,7 +37,10 @@ export const BlockCharacteristics = ({item} : BlockCharacteristicsProps) => {
                 </Button>
             </div>
             <div className={cls.line}></div>
-            <Characteristics item={item}/>
+            <div className={cls.container}>
+                <Characteristics item={item}/>
+                <FormConnected/>
+            </div>
         </>
     )
 }

@@ -3,13 +3,12 @@ import IconAlsove from "@/shared/assets/icons/camper/alsove.svg";
 import IconFull from "@/shared/assets/icons/camper/fully.svg";
 import IconPanel from "@/shared/assets/icons/camper/van.svg";
 import {VehicleType} from "@/shared/ui/VehicleType/VehicleType";
-import {useEffect, useState} from "react";
+import {useCallback, useEffect, useState} from "react";
 
 const types= [
     {id: '0', value: 'alcove', icon: IconAlsove, text: 'Van'},
     {id: '1', value: 'fullyIntegrated', icon: IconFull, text: 'Fully Integrated'},
     {id: '2', value: 'panelTruck', icon: IconPanel, text: 'Van'},
-
 ]
 
 interface VehicleTypeListProps {
@@ -26,10 +25,8 @@ export const VehicleTypeList = ({getType}: VehicleTypeListProps) => {
         }
     }, [filterTypes, filterTypes.length, getType]);
 
-    const handleClick = ({value, status}: {
-        status: string;
-        value: string;
-    }) => {
+
+    const handleClick = useCallback(({ value, status }: { status: string; value: string; }) => {
         if (status === 'active') {
             // @ts-ignore
             setFilterTypes(prevState => [...prevState, value]);
@@ -38,7 +35,7 @@ export const VehicleTypeList = ({getType}: VehicleTypeListProps) => {
                 prevState.filter(equipment => equipment !== value)
             );
         }
-    };
+    }, [setFilterTypes]);
 
     return (
         <div className={cls.container}>

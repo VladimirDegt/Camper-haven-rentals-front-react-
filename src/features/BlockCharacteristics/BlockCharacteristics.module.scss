@@ -35,3 +35,10 @@
     margin-top: 24px;
     margin-bottom: 44px;
 }
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}

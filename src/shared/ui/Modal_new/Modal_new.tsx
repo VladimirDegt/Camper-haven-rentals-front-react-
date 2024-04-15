@@ -9,6 +9,8 @@ import { Button, ButtonTheme } from '@/shared/ui/Button/Button';
 import { CardProps } from '@/shared/types/card';
 import { PhotoList } from '@/shared/ui/PhotoList/PhotoList';
 import { BlockCharacteristics } from '@/features/BlockCharacteristics/BlockCharacteristics';
+import SimpleBar from 'simplebar-react';
+import 'simplebar-react/dist/simplebar.min.css';
 
 interface Modal_newProps {
     item: CardProps;
@@ -83,9 +85,11 @@ export const Modal_new = ({isOpenModal, handleCloseModal, item}: Modal_newProps)
                             <p className={cls.price}>€{price}</p>
                         </div>
                     </div>
-                    <PhotoList arr={gallery}/>
-                    <p className={cls.description}>{description}</p>
-                    <BlockCharacteristics item={item}/>
+                    <SimpleBar  style={{ maxHeight: 720, paddingRight: '10px'}} >
+                        <PhotoList arr={gallery}/>
+                        <p className={cls.description}>{description}</p>
+                        <BlockCharacteristics item={item}/>
+                    </SimpleBar >
                 </div>
             </Dialog.Panel>
         </Dialog>
