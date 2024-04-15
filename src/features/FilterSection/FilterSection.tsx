@@ -28,7 +28,7 @@ export const FilterSection = () => {
     }, [setType]);
 
     const handleClick = () => {
-        if(location === 'choose a location') return toast.error('Choose a location', {toastId: customId});
+        if(location === 'City') return toast.error('Choose a location', {toastId: customId});
         dispatch(campersActions.addFilter({location, equipment, type}))
     }
 

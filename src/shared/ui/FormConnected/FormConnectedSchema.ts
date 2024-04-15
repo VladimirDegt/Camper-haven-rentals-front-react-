@@ -14,8 +14,6 @@ export const FormConnectedSchema = Yup.object().shape({
             'Invalid email format'
         )
         .required("Field is required"),
-    date: Yup.string()
-        .required("Field is required"),
     comment: Yup.string()
         .max(500, 'Length should not exceed 500 characters')
         .trim()

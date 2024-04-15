@@ -4,13 +4,14 @@ import { useState } from 'react';
 import { Characteristics } from '@/features/BlockCharacteristics/Characteristics/Characteristics';
 import { CardProps } from '@/shared/types/card';
 import {FormConnected} from "@/shared/ui/FormConnected/FormConnected";
+import {Reviews} from "@/shared/ui/Reviews/Reviews";
 
 interface BlockCharacteristicsProps {
     item: CardProps
 }
 
 export const BlockCharacteristics = ({item} : BlockCharacteristicsProps) => {
-    const [isClickFeatures, setIsClickFeatures] = useState(false);
+    const [isClickFeatures, setIsClickFeatures] = useState(true);
     const [isClickReviews, setIsClickReviews] = useState(false);
 
     const handleClickFeatures = () => {
@@ -38,7 +39,8 @@ export const BlockCharacteristics = ({item} : BlockCharacteristicsProps) => {
             </div>
             <div className={cls.line}></div>
             <div className={cls.container}>
-                <Characteristics item={item}/>
+                {isClickFeatures &&<Characteristics item={item}/>}
+                {isClickReviews && <Reviews reviews={item.reviews}/>}
                 <FormConnected/>
             </div>
         </>

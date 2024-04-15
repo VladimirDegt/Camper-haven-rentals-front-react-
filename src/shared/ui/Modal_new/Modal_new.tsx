@@ -1,14 +1,14 @@
-import { useEffect, useState } from 'react'
-import { Dialog } from '@headlessui/react'
+import {useEffect, useState} from 'react'
+import {Dialog} from '@headlessui/react'
 import cls from './Modal_new.module.scss'
-import { Icon } from '@/shared/ui/Icon/Icon';
+import {Icon} from '@/shared/ui/Icon/Icon';
 import IconClose from "@/shared/assets/icons/other/close.svg"
 import IconStar from "@/shared/assets/icons/other/star.svg"
 import IconLocal from "@/shared/assets/icons/other/location.svg"
-import { Button, ButtonTheme } from '@/shared/ui/Button/Button';
-import { CardProps } from '@/shared/types/card';
-import { PhotoList } from '@/shared/ui/PhotoList/PhotoList';
-import { BlockCharacteristics } from '@/features/BlockCharacteristics/BlockCharacteristics';
+import {Button, ButtonTheme} from '@/shared/ui/Button/Button';
+import {CardProps} from '@/shared/types/card';
+import {PhotoList} from '@/shared/ui/PhotoList/PhotoList';
+import {BlockCharacteristics} from '@/features/BlockCharacteristics/BlockCharacteristics';
 import SimpleBar from 'simplebar-react';
 import 'simplebar-react/dist/simplebar.min.css';
 
@@ -81,15 +81,15 @@ export const Modal_new = ({isOpenModal, handleCloseModal, item}: Modal_newProps)
                                 <p className={cls.reit_local_text_l}>{location}</p>
                             </div>
                         </div>
-                        <div >
+                        <div>
                             <p className={cls.price}>€{price}</p>
                         </div>
                     </div>
-                    <SimpleBar  style={{ maxHeight: 720, paddingRight: '10px'}} >
+                    <SimpleBar style={{maxHeight: 550, paddingRight: '10px'}}>
                         <PhotoList arr={gallery}/>
                         <p className={cls.description}>{description}</p>
                         <BlockCharacteristics item={item}/>
-                    </SimpleBar >
+                    </SimpleBar>
                 </div>
             </Dialog.Panel>
         </Dialog>

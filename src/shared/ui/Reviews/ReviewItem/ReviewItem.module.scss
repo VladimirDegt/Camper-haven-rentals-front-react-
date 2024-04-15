@@ -1,0 +1,43 @@
+.block_name {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.name {
+    border-radius: 60px;
+    width: 60px;
+    height: 60px;
+    background-color: #F2F4F7;
+    padding: 15px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 125%;
+    color: #E44848;
+    text-align: center;
+}
+
+.rating {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.name_review {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 133%;
+    color: #101828;
+}
+
+.block_comment {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #475467;
+}

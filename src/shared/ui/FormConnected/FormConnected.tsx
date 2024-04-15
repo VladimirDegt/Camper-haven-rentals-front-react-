@@ -1,33 +1,43 @@
 import cls from './FormConnected.module.scss';
 import {Field, Form, Formik, FormikHelpers} from 'formik';
-import {ReactElement} from "react";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import 'react-datepicker/dist/react-datepicker-cssmodules.css';
+import {ReactElement, useState} from "react";
 import {FormConnectedSchema} from "@/shared/ui/FormConnected/FormConnectedSchema";
 import {Button, ButtonTheme} from "@/shared/ui/Button/Button";
 import {Icon} from "@/shared/ui/Icon/Icon";
 import IconCalendar from "@/shared/assets/icons/other/calendar.svg";
+import {toast} from "react-toastify";
 
 interface InitialValues {
     name: string;
     email: string;
-    date: string;
     comment: string;
 }
 
 const customId = 'toastId';
 export const FormConnected = () => {
-
+    const [startDate, setStartDate] = useState( new Date());
     const initialValues: InitialValues = {
         name: '',
         email: '',
-        date: '',
         comment: '',
     };
 
+const handleChangeCalendar = (date: any) => {
+    setStartDate(date);
+}
     const handleSubmit = async (
         values: InitialValues,
         { resetForm }: FormikHelpers<InitialValues>
     ): Promise<void | ReactElement> => {
-        console.log('values-->', values)
+        if(startDate === null ) {
+            toast.error('Date is required', {toastId: customId})
+        } else {
+            resetForm();
+            toast.success('Thank you for your message!', {toastId: customId})
+        }
 
     };
 
@@ -66,24 +76,17 @@ export const FormConnected = () => {
                                 </p>
                             </li>
                             <li className={cls.list_item}>
-                                <Field
-                                    className={cls.item}
-                                    name='date'
-                                    type='text'
-                                    placeholder='Booking date'
+                                <DatePicker
+                                    selected={startDate}
+                                    onChange={(date) => handleChangeCalendar(date)}
+                                    className={cls.calendar}
                                 />
-                                <Button theme={ButtonTheme.CLEAR}>
-                                    <Icon
-                                        className={cls.icon_calendar}
-                                        Svg={IconCalendar}
-                                        width={20}
-                                        height={20}
-                                    />
-                                </Button>
-
-                                <p className={cls.error}>
-                                    {touched.date && errors.date ? errors.date : null}
-                                </p>
+                                <Icon
+                                    className={cls.icon_calendar}
+                                    Svg={IconCalendar}
+                                    width={20}
+                                    height={20}
+                                />
                             </li>
                             <li className={cls.list_item}>
                                 <Field
