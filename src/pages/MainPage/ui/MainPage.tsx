@@ -1,7 +1,9 @@
+import {Background} from "@/shared/ui/Background/Background";
+
 const MainPage = () => {
   return (
       <main>
-          <h2>Головна</h2>
+          <Background/>
       </main>
   );
 };

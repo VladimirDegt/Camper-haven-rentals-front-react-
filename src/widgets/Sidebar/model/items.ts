@@ -15,18 +15,18 @@ export const SidebarItemsList: SidebarItemType[] = [
     {
         path: RoutePath.main,
         Icon: MainIcon,
-        text: 'Головна'
+        text: 'Home'
     },
 
     {
         path: RoutePath.catalog,
         Icon: UploadFile,
-        text: 'Каталог'
+        text: 'Catalog'
     },
     {
         path: RoutePath.favorites,
         Icon: ContentEmail,
-        text: 'Обране'
+        text: 'Favorites'
     },
 
 ]
