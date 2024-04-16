@@ -27,4 +27,3 @@ export const camperSlice = createSlice({
 });
 
 export const { actions: campersActions } = camperSlice;
-export const { reducer: campersReducer } = camperSlice;

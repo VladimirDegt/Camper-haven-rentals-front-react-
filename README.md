@@ -80,7 +80,7 @@ npm run start або npm run star:webpack - запуск frontend проєкту
 
 Взаємодія з даними відбувається за допомогою [Redux toolkit](https://redux-toolkit.js.org/)
 
-Запити на сервер відправляються за допомогою [RTK query](https://redux-toolkit.js.org/rtk-query/overview)
+Запити на сервер відправляються за допомогою [Axios](https://axios-http.com/uk/docs/intro)
 
 ----
 
