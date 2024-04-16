@@ -13,16 +13,17 @@ import {Icon} from "@/shared/ui/Icon/Icon";
 interface SidebarProps {
     className?: string;
 }
-export const Sidebar = memo(({ className }: SidebarProps) => {
+
+export const Sidebar = memo(({className}: SidebarProps) => {
     const [collapsed, setCollapsed] = useState(false)
     const onToggle = () => {
         setCollapsed((prev) => !prev)
     }
 
     return (
-        <aside className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [className])}>
+        <aside className={classNames(cls.Sidebar, {[cls.collapsed]: collapsed}, [className])}>
             <AppLogo
-                size = {collapsed ? 60 : 100}
+                size={collapsed ? 60 : 100}
             />
             <div className={cls.items}>
                 {SidebarItemsList.map((item) => (
@@ -42,7 +43,10 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
                 theme={ButtonTheme.BACKGROUND}
                 circular
             >
-                {collapsed ? <Icon Svg={IconSidebarShow} className={cls.icon} /> : <Icon Svg={IconSidebarHide} className={cls.icon}/>}
+                {collapsed
+                    ? <Icon Svg={IconSidebarShow} className={cls.icon}/>
+                    : <Icon Svg={IconSidebarHide} className={cls.icon}/>
+                }
             </Button>
             <div className={cls.switchers}>
                 <ThemeSwitcher/>

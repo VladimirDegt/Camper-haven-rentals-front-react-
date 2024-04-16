@@ -108,7 +108,7 @@ const dispatch = useDispatch();
                     </div>
                 </div>
                 <div className={cls.description}>
-                    <p> {description}</p>
+                    <p className={cls.description_text}> {description}</p>
                 </div>
                 <Details
                     categories={details}
