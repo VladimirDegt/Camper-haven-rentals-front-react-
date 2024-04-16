@@ -68,6 +68,7 @@
     "@reduxjs/toolkit": "^2.0.0",
     "axios": "^1.6.2",
     "formik": "^2.4.5",
+    "jest-environment-jsdom": "^29.7.0",
     "react": "^18.2.0",
     "react-datepicker": "^6.7.1",
     "react-dom": "^18.2.0",
