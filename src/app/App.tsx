@@ -1,6 +1,5 @@
 import {Suspense, useEffect} from "react";
 import {classNames} from "@/shared/lib/classNames/classNames";
-import {Navbar} from "@/widgets/Navbar";
 import {Sidebar} from "@/widgets/Sidebar";
 import AppRouter from "./providers/router";
 import {useTheme} from "./providers/ThemeProvider";
@@ -9,7 +8,6 @@ import {useDispatch} from "react-redux";
 import {userActions} from "@/entities/User";
 import {MainLayout} from "@/shared/layouts/MainLayout";
 import 'react-toastify/dist/ReactToastify.min.css';
-import {Toolbar} from "@/widgets/Toolbar";
 
 document.body.className = localStorage.getItem(LOCAL_STORAGE_THEME_KEY) || 'app_light_theme';
 
@@ -25,10 +23,8 @@ export const App = () => {
         <div id="app" className={classNames("app_redesigned", {}, [theme])}>
             <Suspense fallback="">
                 <MainLayout
-                    // header={<Navbar/>}
                     content={<AppRouter/>}
                     sidebar={<Sidebar/>}
-                    // toolbar={<Toolbar />}
                 />
             </Suspense>
         </div>

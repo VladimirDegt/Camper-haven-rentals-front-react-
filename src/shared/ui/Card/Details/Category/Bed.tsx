@@ -1,7 +1,8 @@
 import cls from "./Category.module.scss";
 import {Icon} from "@/shared/ui/Icon/Icon";
 import Svg from "@/shared/assets/icons/categories/Bed.svg"
-export const Bed = ({value}: string | number) => {
+import {CategoryProps} from "@/shared/ui/Card/Details/types/categories";
+export const Bed = ({value}: CategoryProps) => {
 
     return (
         <div className={cls.container}>

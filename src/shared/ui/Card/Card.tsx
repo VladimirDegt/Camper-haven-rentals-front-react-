@@ -86,6 +86,7 @@ const dispatch = useDispatch();
                                 theme={ButtonTheme.CLEAR}
                                 onClick={handleClickHeart}
                                 disabled={isDisabled}
+                                className={cls.btn_heart}
                             >
                                 {favorite
                                     ? <Icon
@@ -100,7 +101,6 @@ const dispatch = useDispatch();
                                     />}
                             </Button>
                         </div>
-
                     </div>
                     <div className={cls.location}>
                         <h2>{rating}({reviews.length} Reviews)</h2>
