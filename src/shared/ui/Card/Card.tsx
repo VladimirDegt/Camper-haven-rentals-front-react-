@@ -9,10 +9,13 @@ import {CardProps} from "@/shared/types/card";
 import { useDispatch } from 'react-redux';
 import { campersActions } from '@/features/CardList/model/slice/camperSlice';
 import { Modal_new } from '@/shared/ui/Modal_new/Modal_new';
+import axios from "axios";
 
+interface CardI {
+    item: CardProps
+}
 
-
-export const Card = ({ item }: { item?: Partial<CardProps> }) => {
+export const Card = ({ item }: CardI) => {
     const {
         name,
         price,
@@ -24,15 +27,34 @@ export const Card = ({ item }: { item?: Partial<CardProps> }) => {
         description,
         adults,
         transmission,
-        engine
+        engine,
+        favorite
     } = item as CardProps;
-const [isClickHeart, setIsClickHeart] = useState(false);
 const [isOpenModal, setIsOpenModal] = useState(false);
+const [isDisabled, setIsDisabled] = useState(false);
+
 const dispatch = useDispatch();
     const handleClickHeart = () => {
-        setIsClickHeart(!isClickHeart);
-        if (!isClickHeart) dispatch(campersActions.addFavorite(item))
-        if (isClickHeart) dispatch(campersActions.removeFavorite(item))
+        if (!favorite) {
+            setIsDisabled(true);
+            // axios.post('http://localhost:3002/camper/create', {itemFavorite: item._id})
+                axios.post('https://camper-haven-rentals-back.onrender.com/camper/create', {itemFavorite: item._id})
+                .then(response => {
+                    dispatch(campersActions.updateCamperFavorite(response.data))
+                })
+                .catch(error => console.log('error', error))
+                .finally(() => setIsDisabled(false))
+        }
+        if (favorite) {
+            setIsDisabled(true);
+            // axios.delete(`http://localhost:3002/camper/delete/${item._id}` )
+                axios.delete(`https://camper-haven-rentals-back.onrender.com/camper/delete/${item._id}`)
+                .then(response => {
+                    dispatch(campersActions.updateCamperFavorite(response.data))
+                })
+                .catch(error => console.log('error', error))
+                .finally(() => setIsDisabled(false))
+        }
     };
 
     const handleOpenModal=()=>{
@@ -60,8 +82,12 @@ const dispatch = useDispatch();
                         <h2>{name}</h2>
                         <div className={cls.price}>
                             <h2>€{price}</h2>
-                            <Button theme={ButtonTheme.CLEAR} onClick={handleClickHeart}>
-                                {isClickHeart
+                            <Button
+                                theme={ButtonTheme.CLEAR}
+                                onClick={handleClickHeart}
+                                disabled={isDisabled}
+                            >
+                                {favorite
                                     ? <Icon
                                             Svg={IconHeartActive}
                                             width={24}

@@ -3,7 +3,6 @@ import { createSlice } from '@reduxjs/toolkit';
 const initialState = {
     campers: [],
     filter: null,
-    favorites: [],
 }
 
 export const camperSlice = createSlice({
@@ -17,15 +16,8 @@ export const camperSlice = createSlice({
             state.filter = action.payload
         },
 
-        addFavorite: (state, action) => {
-            // @ts-ignore
-            state.favorites = [...state.favorites, action.payload]
-        },
-
-        removeFavorite: (state, action) => {
-
-            // @ts-ignore
-            state.favorites = state.favorites.filter(item => item.name !== action.payload.name)
+        updateCamperFavorite: (state, action) => {
+            state.campers = action.payload
         },
 
         clearFilter: (state) => {

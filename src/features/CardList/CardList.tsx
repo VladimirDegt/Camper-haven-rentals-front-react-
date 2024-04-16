@@ -23,7 +23,8 @@ export const CardList = () => {
 
     useEffect(() => {
         setIsLoadingServer(true);
-        axios.get('https://camper-haven-rentals-back.onrender.com/camper/all')
+        axios.get('http://localhost:3002/camper/all')
+        // axios.get('https://camper-haven-rentals-back.onrender.com/camper/all')
             .then(response => {
                 setCamper(response.data);
                 dispatch(campersActions.addCamper(response.data))

@@ -21,6 +21,7 @@ interface  Reviews {
     "comment": string;
 }
 export interface CardProps {
+    "_id": string;
     "name": string;
     "price": number;
     "rating": number;
@@ -39,4 +40,5 @@ export interface CardProps {
     "details": DetailsItem;
     "gallery": string[];
     "reviews": Reviews[];
+    favorite: boolean;
 }
