@@ -1,27 +1,19 @@
-import {useDispatch, useSelector} from 'react-redux';
-import { selectFavorites } from '@/features/FavoriteList/module/selectors/getAllFavorite';
 import cls from '@/features/CardList/CardList.module.scss';
 import { Card } from '@/shared/ui/Card/Card';
 import { Button, ButtonTheme } from '@/shared/ui/Button/Button';
 import { useEffect, useState } from 'react';
-import {selectCampers, selectFilter} from "@/features/CardList/model/selectors/getAllCampers";
 import axios from "axios";
-import {campersActions} from "@/features/CardList/model/slice/camperSlice";
 
 export const FavoriteList = () => {
     const [camper, setCamper] = useState([]);
-    const [isLoadingServer, setIsLoadingServer] = useState(false);
     const [visibleCamperCount, setVisibleCamperCount] = useState(4);
 
     useEffect(() => {
-        setIsLoadingServer(true);
-        // axios.get('http://localhost:3002/camper/allFavorite')
-             axios.get('https://camper-haven-rentals-back.onrender.com/camper/allFavorite')
+             axios.get(`${__API__}/camper/allFavorite`)
             .then(response => {
                 setCamper(response.data);
             })
             .catch(error => console.log('error', error))
-            .finally(() => setIsLoadingServer(false));
     }, []);
 
     const loadMore = () => setVisibleCamperCount(prevCount => prevCount + 4);

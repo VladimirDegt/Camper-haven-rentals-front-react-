@@ -38,7 +38,7 @@ const dispatch = useDispatch();
         if (!favorite) {
             setIsDisabled(true);
              // axios.post('http://localhost:3002/camper/create', {itemFavorite: item._id})
-                axios.post('https://camper-haven-rentals-back.onrender.com/camper/create', {itemFavorite: item._id})
+                axios.post(`${__API__}/camper/create`, {itemFavorite: item._id})
                 .then(response => {
                     dispatch(campersActions.updateCamperFavorite(response.data))
                 })
@@ -48,7 +48,7 @@ const dispatch = useDispatch();
         if (favorite) {
             setIsDisabled(true);
              // axios.delete(`http://localhost:3002/camper/delete/${item._id}` )
-                axios.delete(`https://camper-haven-rentals-back.onrender.com/camper/delete/${item._id}`)
+                axios.delete(`${__API__}/camper/delete/${item._id}`)
                 .then(response => {
                     dispatch(campersActions.updateCamperFavorite(response.data))
                 })

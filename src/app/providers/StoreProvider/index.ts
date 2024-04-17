@@ -1,4 +1,4 @@
-import {createReduxStore, AppDispatch} from "./config/store";
+import {AppDispatch, store} from "./config/store";
 import {StoreProvider} from "./ui/StoreProvider";
 
 export type {
@@ -6,6 +6,6 @@ export type {
 }
 
 export {
-    createReduxStore,
+    store,
     StoreProvider,
 }

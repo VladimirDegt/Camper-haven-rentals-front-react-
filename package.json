@@ -67,6 +67,7 @@
     "@headlessui/react": "^1.7.17",
     "@reduxjs/toolkit": "^2.0.0",
     "axios": "^1.6.2",
+    "dotenv": "^16.4.5",
     "formik": "^2.4.5",
     "jest-environment-jsdom": "^29.7.0",
     "react": "^18.2.0",

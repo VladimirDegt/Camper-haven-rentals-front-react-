@@ -19,12 +19,13 @@ export function buildPlugins({paths, isDev, apiUrl}: BuildOptions): webpack.Webp
         new webpack.HotModuleReplacementPlugin(),
         new webpack.DefinePlugin({
             __IS_DEV__: JSON.stringify(isDev),
-			__API__: JSON.stringify(apiUrl)
+			__API__: JSON.stringify(apiUrl),
         }),
 		new CircularDependencyPlugin({
 			exclude: /node_modules/,
 			failOnError: true
 		}),
 		new ForkTsCheckerWebpackPlugin(),
+
 	];
 }

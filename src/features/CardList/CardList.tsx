@@ -1,10 +1,10 @@
 import cls from "./CardList.module.scss";
-import {Card} from "@/shared/ui/Card/Card";
-import {useEffect, useState} from "react";
 import axios from "axios";
+import {useDispatch, useSelector} from "react-redux";
+import {useEffect, useState} from "react";
+import {Card} from "@/shared/ui/Card/Card";
 import {Loader} from "@/shared/ui/Loader/ui/Loader";
 import {Button, ButtonTheme} from "@/shared/ui/Button/Button";
-import {useDispatch, useSelector} from "react-redux";
 import {campersActions} from "@/features/CardList/model/slice/camperSlice";
 import {selectCampers, selectFilter} from "@/features/CardList/model/selectors/getAllCampers";
 import {filterCampers} from "@/shared/lib/filterCampers/filterCampers";
@@ -23,8 +23,7 @@ export const CardList = () => {
 
     useEffect(() => {
         setIsLoadingServer(true);
-         // axios.get('http://localhost:3002/camper/all')
-        axios.get('https://camper-haven-rentals-back.onrender.com/camper/all')
+        axios.get(`${__API__}/camper/all`)
             .then(response => {
                 setCamper(response.data);
                 dispatch(campersActions.addCamper(response.data))

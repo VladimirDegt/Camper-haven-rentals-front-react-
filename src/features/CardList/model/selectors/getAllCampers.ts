@@ -1,5 +1,5 @@
-// @ts-ignore
-export const selectCampers = (state) => state.campers.campers;
+import {RootState} from "@/app/providers/StoreProvider/config/store";
 
-// @ts-ignore
-export const selectFilter = (state) => state.campers.filter;
+export const selectCampers = (state: RootState) => state.campers.campers;
+
+export const selectFilter = (state : RootState) => state.campers.filter;
