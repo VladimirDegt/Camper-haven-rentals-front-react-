@@ -15,8 +15,8 @@ export const FavoriteList = () => {
 
     useEffect(() => {
         setIsLoadingServer(true);
-        axios.get('http://localhost:3002/camper/allFavorite')
-        //     axios.get('https://camper-haven-rentals-back.onrender.com/camper/allFavorite')
+        // axios.get('http://localhost:3002/camper/allFavorite')
+             axios.get('https://camper-haven-rentals-back.onrender.com/camper/allFavorite')
             .then(response => {
                 setCamper(response.data);
             })
