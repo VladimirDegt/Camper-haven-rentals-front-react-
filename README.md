@@ -1,4 +1,5 @@
 ## Тестове завдання: [test task](docs/test_task.md)
+Estimate - 7 days
 
 ## Запуск проєкту
 
@@ -87,8 +88,12 @@ npm run start або npm run star:webpack - запуск frontend проєкту
 
 ----
 
-## Документація бекенда
+## Бекенд та документація
+
+[GitHub](https://github.com/VladimirDegt/Camper-Haven-Rentals-back)
 
 [Swagger](https://camper-haven-rentals-back.onrender.com/api)
 
 ----
+
+
