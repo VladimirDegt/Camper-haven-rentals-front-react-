@@ -25,6 +25,6 @@ export function buildPlugins({paths, isDev, apiUrl}: BuildOptions): webpack.Webp
 			exclude: /node_modules/,
 			failOnError: true
 		}),
-		new ForkTsCheckerWebpackPlugin()
+		new ForkTsCheckerWebpackPlugin(),
 	];
 }

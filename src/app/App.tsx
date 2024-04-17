@@ -11,7 +11,6 @@ document.body.className = localStorage.getItem(LOCAL_STORAGE_THEME_KEY) || 'app_
 
 export const App = () => {
     const {theme} = useTheme();
-
     return (
         <div id="app" className={classNames("app_redesigned", {}, [theme])}>
             <Suspense fallback="">
