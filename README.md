@@ -1,4 +1,4 @@
-## Тестове завдання [Test task](docs/test_task.md)
+## Тестове завдання: [test task](docs/test_task.md)
 
 ## Запуск проєкту
 
