@@ -1,7 +1,7 @@
 .background {
     width: 100%;
-    height: 1000px;
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('@/shared/assets/image/background.webp');
+    height: 100vh;
+    background-image: linear-gradient(rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)), url('@/shared/assets/image/background.webp');
     background-size: cover;
     background-position: center;
     padding: 48px;
@@ -12,7 +12,7 @@
     font-weight: 700;
     font-size: 48px;
     line-height: 96px;
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-family);
     color: white;
 }
 
@@ -21,6 +21,6 @@
     font-weight: 500;
     font-size: 32px;
     line-height: 48px;
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-family);
     color: white;
 }

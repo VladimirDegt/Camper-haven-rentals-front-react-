@@ -5,7 +5,6 @@ import {AC} from "@/shared/ui/Card/Details/Category/AC";
 import {Petrol} from "@/shared/ui/Card/Details/Category/Petrol";
 import {Kitchen} from "@/shared/ui/Card/Details/Category/Kitchen";
 import {Bed} from "@/shared/ui/Card/Details/Category/Bed";
-import {AirConditioner} from "@/shared/ui/Card/Details/Category/AirConditioner";
 import {CD} from "@/shared/ui/Card/Details/Category/CD";
 import {Radio} from "@/shared/ui/Card/Details/Category/Radio";
 import {Hob} from "@/shared/ui/Card/Details/Category/Hob";

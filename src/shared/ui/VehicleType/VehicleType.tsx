@@ -29,8 +29,12 @@ export const VehicleType = ({icon, text, value, onClick } : VehicleTypeProps) =>
     return (
         <button className={`${isClicked ? cls.active : cls.container}`} data-value={value}
             onClick={handleClick}>
-            <Icon Svg={icon} width={40}
-                height={28} data-value={value}/>
+            <Icon
+                Svg={icon}
+                width={40}
+                height={28}
+                data-value={value}
+            />
             <p className={cls.text}>{text}</p>
         </button>
     )

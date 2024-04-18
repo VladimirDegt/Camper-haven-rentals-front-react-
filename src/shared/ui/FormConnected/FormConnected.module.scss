@@ -1,27 +1,23 @@
 .container {
     display: flex;
     flex-direction: column;
-    border: 1px solid rgba(16, 24, 40, 0.2);
+    border: 1px solid var(--line-card);
     border-radius: 10px;
     padding: 24px;
     width: 448px;
 }
 
 .title {
-    font-family: Inter, sans-serif;
+    font: var(--font-l);
     font-weight: 600;
-    font-size: 20px;
-    line-height: 120%;
-    color: #101828;
+    color: var(--primary-color);
     margin-bottom: 8px;
 }
 
 .text {
-    font-family: Inter, sans-serif;
+    font: var(--font-m);
     font-weight: 400;
-    font-size: 16px;
-    line-height: 150%;
-    color: #475467;
+    color: var(--secondary-color);
     margin-bottom: 24px;
 }
 
@@ -40,29 +36,30 @@
     padding: 18px;
     width: 100%;
     border: none;
-    background-color: #F7F7F7;
+    background-color: var(--inputs);
+    color: var(--primary-color);
 
     &::placeholder {
-        font-family: Inter, sans-serif;
+        font: var(--font-m);
         font-weight: 400;
-        font-size: 16px;
-        line-height: 125%;
-        color: rgba(16, 24, 40, 0.6);
+        color: var(rgb(16 24 40 / 60%));
     }
 }
+
 .comment {
     height: 114px;
     resize: none;
     margin-bottom: 32px;
 }
+
 .error {
     position: absolute;
     left: 18px;
-    font-family: Inter, sans-serif;
+    font-family: var(--font-family);
     font-weight: 300;
     font-size: 10px;
-    line-height: 150%;
-    color: #E44848;
+    line-height: 15px;
+    color: var(--button);
 }
 
 .btn {
@@ -80,5 +77,6 @@
     padding: 18px;
     width: 393px;
     border: none;
-    background-color: #F7F7F7;
+    background-color: var(--inputs);
+    color: var(--primary-color);
 }

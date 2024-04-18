@@ -7,10 +7,11 @@
     padding-left: 24px;
     padding-right: 24px;
     max-width: 128px;
-    border: 1px solid #F7F7F7;
+    border: 1px solid var(--inputs);
     border-radius: 10px;
     height: 95px;
     cursor: pointer;
+    background-color: var(--inputs);
 }
 
 .active {
@@ -22,9 +23,14 @@
     padding-left: 24px;
     padding-right: 24px;
     max-width: 128px;
-    border: 1px solid #E44848;
+    border: 1px solid var(--button);
     border-radius: 10px;
     height: 95px;
     cursor: pointer;
+}
 
+.text {
+    font: var(--font-m);
+    font-weight: 500;
+    color: var(--primary-color)
 }

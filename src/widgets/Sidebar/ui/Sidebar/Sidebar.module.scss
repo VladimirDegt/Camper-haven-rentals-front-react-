@@ -2,7 +2,7 @@
     position: relative;
     height: 100%;
     width: var(--sidebar-width);
-    background-color: var(--light-bg-redesigned);
+    background-color: var(--bg-sidebar);
     border-radius: 32px;
     padding-top: 20px;
 }
@@ -29,9 +29,8 @@
     height: 50px;
     position: absolute;
     border: none;
-    left: calc(var(--sidebar-width) - var(--font-size-l));
+    left: calc(var(--sidebar-width) - var(--font-size-xl));
     top: 50%;
-    background-color: var(--bg-redesigned);
     z-index: 2;
 }
 
@@ -40,7 +39,7 @@
 
     .collapsedBtn {
         position: absolute;
-        left: calc(var(--sidebar-width-collapsed) - var(--font-size-l));
+        left: calc(var(--sidebar-width-collapsed) - var(--font-size-xl));
         top: 50%
 
     }

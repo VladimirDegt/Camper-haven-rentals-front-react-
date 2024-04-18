@@ -1,45 +1,35 @@
 :root {
-    --font-family-main: "Inter", sans-serif;
-    --font-family-text-redesigned: 'Inter', sans-serif;
-    --font-family-header-redesigned: 'Roboto', sans-serif;
+    // Шрифти
+    --font-family: "Inter", sans-serif;
 
     --font-size-m: 16px;
     --font-line-m: 24px;
-    --font-m: var(--font-size-m) / var(--font-line-m) var(--font-family-main);
-    
-    --font-size-l: 24px;
-    --font-line-l: 36px;
-    --font-l: var(--font-size-l) / var(--font-line-l) var(--font-family-main);
+    --font-m: var(--font-size-m) / var(--font-line-m) var(--font-family);
 
-    --font-size-xl: 32px;
-    --font-line-xl: 40px;
-    --font-xl: var(--font-size-xl) / var(--font-line-xl) var(--font-family-main);
+    --font-size-l: 20px;
+    --font-line-l: 24px;
+    --font-l: var(--font-size-l) / var(--font-line-l) var(--font-family);
+
+    --font-size-xl: 24px;
+    --font-line-xl: 30px;
+    --font-xl: var(--font-size-xl) / var(--font-line-xl) var(--font-family);
+
 
     // Розміри
-    --navbar-height: 50px;
-    --modal-width: 400px;
-
     --sidebar-width: 200px;
     --sidebar-width-collapsed: 50px;
-
-    --drag-and-drop-height: 600px;
-
-    // z-Індекси
-    --modal-z-index: 10;
 
     // Транзішіон
     --transition: background-color 0.3s ease-in-out;
 
     // Кольори
+    --bg-color: #fff;
     --overlay-modal: rgb(17 18 19 / 40%);
-    --red-light: #f00;
-    --red-dark: #ce0505;
-
-    // redesigned
-    --font-m-redesigned: var(--font-size-m) / var(--font-line-m) var(--font-family-text-redesigned);
-
-    --font-l-redesigned: var(--font-size-l) / var(--font-line-l) var(--font-family-text-redesigned);
-
-    --font-xl-redesigned: var(--font-size-xl) / var(--font-line-xl) var(--font-family-header-redesigned);
+    --button: #e44848;
+    --main: #101828;
+    --inputs: #f7f7f7;
+    --block-features: #f2f4f7;
+    --rating: #ffc531;
+    --text: #475467;
 
 }

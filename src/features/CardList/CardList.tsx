@@ -47,7 +47,7 @@ export const CardList = () => {
         <>
             {isLoadingServer ? (
                 <div className={cls.loader}>
-                    <h3>Wait, the server on render.com is undergoing maintenance for about 2 minutes...</h3>
+                    <h3 className={cls.message}>Wait, the server on render.com is undergoing maintenance for about 3 minutes...</h3>
                     <Loader />
                 </div>
             ) : (
@@ -60,7 +60,7 @@ export const CardList = () => {
                                 </li>
                         ))
                             : <li className={cls.not_found}>
-                                <h3>Sorry, not found</h3>
+                                <h3 className={cls.message}>Sorry, not found</h3>
                                 <Button theme={ButtonTheme.SEARCH} onClick={handleReset}>Reset</Button>
                             </li>
                         }

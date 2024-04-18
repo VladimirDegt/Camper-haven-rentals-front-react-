@@ -25,10 +25,14 @@ export const Equipment = ({icon, text, value, onClick}: EquipmentProps) => {
     };
 
     return (
-        <button className={`${isClicked ? cls.active : cls.container}`} data-value={value}
+        <button
+            className={`${isClicked ? cls.active : cls.container}`} data-value={value}
             onClick={handleClick}>
-            <Icon Svg={icon} width={32}
-                height={32}/>
+            <Icon
+                Svg={icon}
+                width={32}
+                height={32}
+            />
             <p className={cls.text}>{text}</p>
         </button>
     )

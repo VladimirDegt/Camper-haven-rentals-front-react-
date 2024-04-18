@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react'
 import {Dialog} from '@headlessui/react'
-import cls from './Modal_new.module.scss'
+import cls from './Modal.module.scss'
 import {Icon} from '@/shared/ui/Icon/Icon';
 import IconClose from "@/shared/assets/icons/other/close.svg"
 import IconStar from "@/shared/assets/icons/other/star.svg"
@@ -12,13 +12,13 @@ import {BlockCharacteristics} from '@/features/BlockCharacteristics/BlockCharact
 import SimpleBar from 'simplebar-react';
 import 'simplebar-react/dist/simplebar.min.css';
 
-interface Modal_newProps {
+interface ModalProps {
     item: CardProps;
     isOpenModal: boolean;
     handleCloseModal: () => void;
 }
 
-export const Modal_new = ({isOpenModal, handleCloseModal, item}: Modal_newProps) => {
+export const Modal = ({isOpenModal, handleCloseModal, item}: ModalProps) => {
     const {
         name,
         price,

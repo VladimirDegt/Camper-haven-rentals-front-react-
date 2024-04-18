@@ -3,7 +3,7 @@
     align-items: center;
     gap: 8px;
     border-radius: 100px;
-    background-color:  #F2F4F7;
+    background-color:  var(--block-features);
     padding: 12px 18px;
     max-width: 230px;
 
@@ -16,12 +16,10 @@
     }
 
     &_text {
+        font: var(--font-m);
         text-align: center;
-        font-family: Inter, sans-serif;
         font-weight: 500;
-        font-size: 16px;
-        line-height: 20px;
-        color: #101828;
+        color: var(--primary-color);
     }
 
 }

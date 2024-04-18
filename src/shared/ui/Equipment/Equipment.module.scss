@@ -4,12 +4,13 @@
     align-items: center;
     justify-content: center;
     gap: 8px;
-    border: 1px solid #F7F7F7;
+    border: 1px solid var(--inputs);
     border-radius: 10px;
     padding: 17px 40px;
     width: 112px;
     height: 95px;
     cursor: pointer;
+    background-color: var(--inputs);
 }
 
 .active {
@@ -18,10 +19,16 @@
     align-items: center;
     justify-content: center;
     gap: 8px;
-    border: 1px solid #E44848;
+    border: 1px solid var(--button);
     border-radius: 10px;
     padding: 17px 40px;
     width: 112px;
     height: 95px;
     cursor: pointer;
+}
+
+.text {
+    font: var(--font-m);
+    font-weight: 500;
+    color: var(--primary-color)
 }

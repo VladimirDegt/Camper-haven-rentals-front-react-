@@ -8,7 +8,7 @@ import {useState} from "react";
 import {CardProps} from "@/shared/types/card";
 import { useDispatch } from 'react-redux';
 import { campersActions } from '@/features/CardList/model/slice/camperSlice';
-import { Modal_new } from '@/shared/ui/Modal_new/Modal_new';
+import { Modal } from '@/shared/ui/Modal/Modal';
 import axios from "axios";
 
 interface CardI {
@@ -118,7 +118,7 @@ const dispatch = useDispatch();
                 />
                 <Button theme={ButtonTheme.SHOW} onClick={handleOpenModal}>Show more</Button>
             </div>
-            <Modal_new
+            <Modal
                 item={item}
                 isOpenModal={isOpenModal}
                 handleCloseModal={handleCloseModal}

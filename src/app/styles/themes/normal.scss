@@ -1,22 +1,14 @@
 .app_light_theme {
-    --bg-color: #f3f3f3;
+
+    --bg-color: #fff;
     --inverted-bg-color: #1b2b34;
 
-    --primary-color: #161f37;
-    --secondary-color: #f3f3f3;
+    --primary-color: #101828;
+    --secondary-color: #475467;
 
-    --inverted-primary-color: #5a80ce;
-    --inverted-secondary-color: #161f37;
+    --bg-sidebar: #f7f7f7;
 
-    // redesigned
-    --dark-bg-redesigned: #FFF;
-    --bg-redesigned: #EFF5F6;
-    --light-bg-redesigned: #E2EEF1;
-    --text-redesigned: #101828;
-    --hint-redesigned: #ADBCC0;
-    --cancel-redesigned: #F77;
-    --save-redesigned: #62DE85;
-    --icon-redesigned: #5ED3F3;
-    --accent-redesigned: #00C8FF;
-
+    --accent-redesigned: #1D59FF;
+    --line: rgb(16 24 40 / 10%);
+    --line-card: rgb(16 24 40 / 20%);
 }

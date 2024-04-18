@@ -12,7 +12,7 @@ document.body.className = localStorage.getItem(LOCAL_STORAGE_THEME_KEY) || 'app_
 export const App = () => {
     const {theme} = useTheme();
     return (
-        <div id="app" className={classNames("app_redesigned", {}, [theme])}>
+        <div id="app" className={classNames("app", {}, [theme])}>
             <Suspense fallback="">
                 <MainLayout
                     content={<AppRouter/>}

@@ -10,13 +10,11 @@
     border-radius: 60px;
     width: 60px;
     height: 60px;
-    background-color: #F2F4F7;
+    background-color: var(--block-features);
     padding: 15px;
-    font-family: 'Inter', sans-serif;
+    font: var(--font-xl);
     font-weight: 600;
-    font-size: 24px;
-    line-height: 125%;
-    color: #E44848;
+    color: var(--button);
     text-align: center;
 }
 
@@ -27,17 +25,15 @@
 }
 
 .name_review {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-family);
     font-weight: 600;
     font-size: 18px;
-    line-height: 133%;
-    color: #101828;
+    line-height: 24px;
+    color: var(--primary-color);
 }
 
 .block_comment {
-    font-family: 'Inter', sans-serif;
+    font: var(--font-m);
     font-weight: 400;
-    font-size: 16px;
-    line-height: 150%;
-    color: #475467;
+    color: var(--secondary-color);
 }

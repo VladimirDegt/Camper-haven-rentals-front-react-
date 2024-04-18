@@ -5,7 +5,8 @@
 .label {
     margin-bottom: 8px;
     font: var(--font-m);
-    color: #475467;
+    color: var(--secondary-color);
+    font-weight: 500
 }
 
 .button {
@@ -16,7 +17,8 @@
     border: none;
     width: 360px;
     height: 56px;
-    background-color: #F7F7F7;
+    background-color: var(--inputs);
+    color: var(--secondary-color);
     text-align: left;
     cursor: pointer;
 }
@@ -32,7 +34,8 @@
     width: 360px;
     margin-top: 4px;
     padding: 8px;
-    background-color: #F7F7F7;
+    background-color: var(--inputs);
+    color: var(--secondary-color);
     text-align: left;
     border-radius: 10px;
     cursor: pointer;
@@ -41,7 +44,7 @@
 .option {
     &:hover,
     &:focus {
-        background-color: #FFC531;
+        background-color: var(--rating);
         border-radius: 4px;
     }
 }
