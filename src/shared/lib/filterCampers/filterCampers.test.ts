@@ -26,3 +26,4 @@ describe('filterCampers', () => {
         expect(result).toEqual([]);
     });
 });
+
