@@ -5,7 +5,7 @@ export const filterCampers = (original: any, filters: any) => {
     for (const equipment of filters.equipment) {
         let checkArr = []
         for (const origin of byLocation) {
-            const checkValue = {
+            const checkValue= {
                 'airConditioner': origin.details.airConditioner,
                 'kitchen': origin.details.kitchen,
                 'shower': origin.details.shower,
@@ -13,6 +13,7 @@ export const filterCampers = (original: any, filters: any) => {
                 'TV': origin.details.TV,
                 'transmission': origin.transmission
             };
+
             // @ts-ignore
             if (!checkValue[equipment]) {
                 continue
