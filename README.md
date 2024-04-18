@@ -14,9 +14,9 @@ npm run start або npm run star:webpack - запуск frontend проєкту
 
 - `npm run start` - Запуск frontend прєкта на vite
 - `npm run star:webpack` - Запуск frontend проєкта на webpack dev server
-- `vite build` - Сбірка Vite
-- `npm run build:prod` - Сбірка у prod режимі
-- `npm run build:dev` - Сбірка і dev режимі (не мінімизировано)
+- `vite build` - Збірка Vite
+- `npm run build:prod` - Збірка у prod режимі
+- `npm run build:dev` - Збірка і dev режимі (не мінімизировано)
 - `npm run lint:ts` - Перевірка ts файлів линтером
 - `npm run lint:ts:fix` - Виправлення ts файлів линтером
 - `npm run lint:scss` - Перевірка scss файлів style линтером
