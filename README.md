@@ -92,7 +92,7 @@ npm run start або npm run star:webpack - запуск frontend проєкту
 
 [GitHub](https://github.com/VladimirDegt/Camper-Haven-Rentals-back)
 
-[Swagger](https://camper-haven-rentals-back.onrender.com/api)
+[Swagger](https://camper-haven-rentals-back.vercel.app/swagger)
 
 ----
 
